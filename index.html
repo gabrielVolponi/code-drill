@@ -16,7 +16,7 @@
 
 <body class="overflow-x-hidden">
     <header class="fixed top-0 left-0 w-full flex justify-between items-center p-5 z-50">
-        <i class="fa-solid fa-file-code text-[30px] text-[#0C88DF]"></i>
+        <a href="#exercises"><i class="fa-solid fa-file-code text-[30px] text-[#0C88DF]"></i></a>
         <button id="menuButton">
             <i class="fa-solid fa-bars text-[30px] text-[#0C88DF]"></i>
         </button>
@@ -30,9 +30,9 @@
         <nav class="text-white p-8 space-y-6 flex flex-col items-center ">
             <i class="fa-solid fa-file-code text-4xl text-[#FFF] mx-auto block"></i>
             <ul class="flex flex-col gap-4 text-[26px] items-center mt-[50px]">
-                <li><a href="" class="">Exercises</a></li>
-                <li><a href="" class="">About</a></li>
-                <li><a href="" class=" ">Creators</a></li>
+                <li><a href="exercises" class="">Exercises</a></li>
+                <li><a href="about" class="">About</a></li>
+                <li><a href="creators" class=" ">Creators</a></li>
                 <li><a href="" class="">Contact</a></li>
 
             </ul>
@@ -44,7 +44,7 @@
 
 
     <main>
-        <section class="mt-25 hero flex flex-col items-center w-full min-h-screen">
+        <section id="exercises" class="mt-25 hero flex flex-col items-center w-full min-h-screen">
             <img class="w-3/4 h-3/5  " src="images/Welcome.png" alt="Ilustração Hero">
             <div class="relative -top-2 text-center">
                 <h1 class="text-blue-400 font-bold text-4xl m-1 ">Ask for an exercise</h1>
@@ -101,13 +101,52 @@
                     <img class="w-10" src="images/svgs-icons/openai.svg" alt="">
                 </div>
                 <div id="linkSectionCreators" class="flex flex-col text-blue-400 ">
-                    <a href="#creators" class="flex flex-col">
+                    <a href="#contact" class="flex flex-col">
                         <i class="fa-solid fa-chevron-down text-xl"></i>
                         <i class="fa-solid fa-chevron-down relative -top-2 text-xl"></i>
                     </a>
                 </div>
             </div>
         </section>
+
+        <section id="contact" class="min-h-screen pt-[80px]">
+            <h2 class="text-blue-400 text-3xl font-bold ml-6 mb-6 ">Contact</h2>
+            <div class="flex flex-col justify-center items-center w-80 m-6 gap-6">
+                <p class="text-start text-blue-400 font-semibold ">Have questions, feedback, or just want to say hi?
+                    Fill out the form below and we’ll get back to you as soon as possible.</p>
+            </div>
+            <div id="form" class="flex flex-col justify-center items-center gap-3">
+                <div id="fieldInput" class="flex flex-col">
+                    <label class="text-[#0C88DF] font-bold" for="Email">E-mail:</label>
+                    <input class="bg-[#c7dae8] w-85 rounded-md text-slate-500" type="email"
+                        placeholder="Enter your e-mail.">
+                </div>
+                <div id="fieldInput" class="flex flex-col ">
+                    <label class="text-[#0C88DF] font-bold" for="Email">E-mail:</label>
+                    <input class="bg-[#c7dae8] w-85 h-36 rounded-md text-start  text-slate-500" type="text">
+                </div>
+            </div>
+            <div class="flex justify-center item mt-6">
+                <input class="bg-[#6388c8] text-white px-14 py-2 rounded-md " type="submit"
+                    value="Send">
+                </div>
+
+                
+        </section>
+
+        <footer class="bg-[#6388c8] w-full py-6 text-white">
+            <div class="flex flex-col items-center gap-4">
+                <p class="text-center text-sm">Leave a star on our <a href="https://github.com/your-repo" target="_blank" class="underline hover:text-blue-300">GitHub</a> repo !</p>
+                <div class="flex gap-4 items-center">
+                    
+                    <i class="fa-solid fa-star"></i>
+                    <a href="https://github.com/gabrielVolponi/code-drill" target="_blank" class="hover:text-blue-300">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </a>
+                </div>
+                <p class="text-xs text-center">© 2025 Code Drill. All rights reserved.</p>
+            </div>
+        </footer>
     </main>
 
     <script src="menuLateral.js"></script>
