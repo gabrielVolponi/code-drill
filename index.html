@@ -11,7 +11,7 @@
 
 </head>
 <body class="overflow-x-hidden">
-    <header class="fixed top-0 left-0 w-full flex justify-between items-center p-5 bg-white z-50">
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center p-5 z-50">
         <i class="fa-solid fa-file-code text-[30px] text-[#0C88DF]"></i>
         <button id="menuButton">
             <i class="fa-solid fa-bars text-[30px] text-[#0C88DF]"></i>
@@ -22,8 +22,8 @@
     
         <div id="sidebar" class="fixed top-0 right-0 h-full w-3/5 bg-[#0C88DF] transform translate-x-full transition-transform duration-300 z-60">
 
-            <nav class="text-white p-6 space-y-6 flex flex-col items-center ">
-                <i class="fa-solid fa-file-code text-[30px] text-[#FFF] mx-auto block"></i>
+            <nav class="text-white p-8 space-y-6 flex flex-col items-center ">
+                <i class="fa-solid fa-file-code text-4xl text-[#FFF] mx-auto block"></i>
                 <ul class="flex flex-col gap-4 text-[26px] items-center mt-[50px]">
                     <li><a href="" class="">Exercises</a></li>
                     <li><a href="" class="">About</a></li>
@@ -31,7 +31,7 @@
                     <li><a href="" class="">Contact</a></li>
             
                 </ul>
-                <i class="fa-solid fa-circle-chevron-right absolute bottom-[150px] text-[30px] text-[#FFF]"></i>
+                <i id="closeSide" class="fa-solid fa-circle-chevron-right absolute bottom-[150px] text-4xl text-[#FFF]"></i>
             </nav>
             
             </div>
