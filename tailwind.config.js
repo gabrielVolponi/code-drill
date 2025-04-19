@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1D4ED8', // Exemplo de cor personalizada
-        secondary: '#9333EA',
+        primary: '#0C88DF', // Exemplo de cor personalizada
+        secondary: '#013EA6',
       },
     },
   },
