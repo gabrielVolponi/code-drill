@@ -16,16 +16,16 @@
 
 <body class="overflow-x-hidden ">
     <header class="fixed top-0 left-0 w-full backdrop-blur-sm flex justify-between items-center p-5 z-50 ">
-        <a href="#exercises"><i class="fa-solid fa-file-code text-[30px] text-[#0C88DF] lg:ml-10 lg:my-6 lg:text-[45px] xl:text-[50px] md:ml-6 md:my-6 md:text-[40px]" ></i></a>
+        <a href="#exercises"><i class="fa-solid fa-file-code text-[30px] text-[#0C88DF] lg:ml-10 lg:my-6 lg:text-[45px] xl:text-[50px] md:ml-6 md:my-6 md:text-[40px] sm:text-[38px] sm:ml-6 sm:my-6" ></i></a>
         <button id="menuButton">
-            <i class="fa-solid fa-bars text-[30px] lg:mr-10 lg:my-6 lg:text-[45px] xl:text-[50px] text-[#0C88DF] md:mr-6 md:my-6 md:text-[40px] "></i>
+            <i class="fa-solid fa-bars text-[30px] lg:mr-10 lg:my-6 lg:text-[45px] xl:text-[50px] text-[#0C88DF] md:mr-6 md:my-6 md:text-[40px] sm:text-[38px] sm:mr-6 sm:my-6"></i>
         </button> 
     </header>
 
     <div id="overlay" class="fixed inset-0  backdrop-blur-sm hidden z-30 lg:backdrop-blur-none xl:backdrop-blur-none"></div>
 
     <div id="sidebar"
-        class="fixed top-0 right-0 h-full w-3/5 bg-[#0C88DF] transform translate-x-full transition-transform duration-300 z-60 lg:w-1/6 md:w-1/3">
+        class="fixed top-0 right-0 h-full w-3/5 bg-[#0C88DF] transform translate-x-full transition-transform duration-300 z-60 lg:w-1/6 md:w-1/3 sm:w-1/3">
 
         <nav class="text-white p-8 space-y-6 flex flex-col items-center ">
             <i class="fa-solid fa-file-code text-4xl text-[#FFF] mx-auto block"></i>
@@ -75,10 +75,10 @@
             </div>
         </section>
 
-        <section id="about" class="min-h-screen pt-[80px] lg:pt-[100px]
+        <section id="about" class="min-h-screen pt-[80px] lg:pt-[100px] sm:ml-6
         ">
             <h2 class="text-[#0C88DF] text-3xl font-bold ml-6 mb-6 lg:text-[46px] lg:ml-10">About the Project</h2>
-            <div class="flex flex-col justify-center w-80 m-6 gap-6 lg:w-9/10 lg:text-center lg:ml-10 lg:text-[22px] md:w-9/10">
+            <div class="flex flex-col justify-center w-80 m-6 gap-6 lg:w-9/10 lg:text-center lg:ml-10 lg:text-[22px] md:w-9/10 sm:w-9/10">
                 <p class="text-start text-[#0C88DF] ">This website was created to help people who are learning JavaScript
                     practice in a personalized and dynamic way. The idea is simple: you choose the difficulty level
                     (easy, medium, or hard), select the topic you want to practice (such as functions, arrays, objects,
@@ -146,11 +146,11 @@
             </div>
         </section>
 
-        <section id="contact" class="max-h-[calc(100vh-143px )] pt-[80px] flex flex-col justify-center  lg:flex lg:flex-col lg:justify-center lg:items-center lg:pt-[100px]s md:w-9/10 md:mx-auto ">
+        <section id="contact" class="max-h-[calc(100vh-143px )] pt-[80px] flex flex-col justify-center  lg:flex lg:flex-col lg:justify-center lg:items-center lg:pt-[100px] md:w-9/10 md:mx-auto ">
             <h2 class="text-[#0C88DF] text-3xl font-bold flex justify-center lg:text-[46px] lg:mx-auto md:justify-center md:items-center
             md:mx-auto">Contact</h2>
-            <div class="flex flex-col justify-center items-center w-80 m-6 gap-6 lg:w-5/10 md:w-6/10 md:mx-auto ">
-                <p class="text-start text-[#0C88DF] font-semibold ml-8 lg:text-[20px] lg:w-full md:justify-center ">Have questions, feedback, or just want to say hi?
+            <div class="flex flex-col justify-center items-center w-80 m-6 gap-6 lg:w-5/10 md:w-6/10 md:mx-auto sm:mx-auto">
+                <p class="text-start text-[#0C88DF] font-semibold ml-8 lg:text-[20px] lg:w-full md:justify-center sm:ml-0 ">Have questions, feedback, or just want to say hi?
                     Fill out the form below and we’ll get back to you as soon as possible.</p>
             </div>
             <div id="form" class="flex flex-col justify-center items-center gap-3">
@@ -173,16 +173,16 @@
 
         <footer class="bg-[#0C88DF] w-full py-6 mt-15 text-white flex flex-col justify-center items-center">
             <div class="flex flex-col items-center gap-4">
-                <p class="text-center text-sm lg:text-[24px] md:text-[16px]">Leave a star on our <a href="https://github.com/your-repo"
+                <p class="text-center text-sm lg:text-[24px] md:text-[16px] sm:text-[16px] sm:text-xl">Leave a star on our <a href="https://github.com/your-repo"
                         target="_blank" class="underline hover:text-blue-300">GitHub</a> repo !</p>
                 <div class="flex gap-4 items-center">
 
-                    <i class="fa-solid fa-star lg:text-3xl md:text-2xl"></i>
+                    <i class="fa-solid fa-star lg:text-3xl md:text-2xl sm:text-xl"></i>
                     <a href="https://github.com/gabrielVolponi/code-drill" target="_blank" class="hover:text-blue-300">
                         <i class="fa-brands fa-github text-2xl lg:text-3xl md:text-2xl"></i>
                     </a>
                 </div>
-                <p class="text-xs text-center lg:text-[18px]">© 2025 Code Drill. All rights reserved.</p>
+                <p class="text-xs text-center lg:text-[18px] sm:text-[14px]">© 2025 Code Drill. All rights reserved.</p>
             </div>
         </footer>
     </main>
