@@ -42,8 +42,25 @@ const exerciseAnswer = localStorage.getItem('exerciseAnswer');
 
 // Exibir a resposta no elemento com ID "answer"
 if (exerciseAnswer) {
-    document.getElementById('answer').textContent = exerciseAnswer;
+    // Substituir os asteriscos por tags <strong> para formatação
+    const formattedAnswer = exerciseAnswer
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Substitui **texto** por <strong>texto</strong>
+        .replace(/\n/g, '<br>'); // Substitui quebras de linha por <br>
+
+    document.getElementById('answer').innerHTML = formattedAnswer;
 } else {
     document.getElementById('answer').textContent = 'Nenhuma resposta encontrada.';
 }
+
+document.getElementById("btnDone").addEventListener("click", function () {
+    const modal = document.getElementById("modal");
+    modal.classList.remove("hidden"); 
+});
+
+document.getElementById('closeModal').addEventListener('click', function (params) {
+    const modal = document.getElementById("modal")
+    modal.classList.add("hidden")
+})
+
+
 
