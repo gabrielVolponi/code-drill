@@ -10,9 +10,7 @@ document.getElementById('exerciseInput').addEventListener('keydown', function (e
 
 function handleRequest() {
     // Mostrar o spinner e aplicar blur no corpo
-    const loadingSpinner = document.getElementById('loadingSpinner');
     const body = document.body;
-    loadingSpinner.classList.remove('hidden');
     body.classList.add('blur-sm');
 
     // Obtenha o valor do campo de entrada
@@ -46,7 +44,7 @@ function handleRequest() {
         })
         .then(data => {
             // Ocultar o spinner e remover o blur
-            loadingSpinner.classList.add('hidden');
+            
             body.classList.remove('blur-sm');
 
             // Exibir a resposta da API no console
@@ -55,7 +53,7 @@ function handleRequest() {
         })
         .catch(error => {
             // Ocultar o spinner e remover o blur
-            loadingSpinner.classList.add('hidden');
+           
             body.classList.remove('blur-sm');
 
             console.error('Erro ao enviar para a API Gemini:', error);
