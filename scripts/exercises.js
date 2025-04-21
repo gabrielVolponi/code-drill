@@ -44,16 +44,19 @@ function handleRequest() {
         })
         .then(data => {
             // Ocultar o spinner e remover o blur
-            
             body.classList.remove('blur-sm');
 
-            // Exibir a resposta da API no console
-            console.log('Resposta da API Gemini:', data);
-            console.log(data.candidates[0].content.parts[0].text);
+            // Obter o texto da resposta da API
+            const exerciseText = data.candidates[0].content.parts[0].text;
+
+            // Salvar a resposta no localStorage
+            localStorage.setItem('exerciseAnswer', exerciseText);
+
+            // Redirecionar para a página answer.html
+            window.location.href = 'answer.html';
         })
         .catch(error => {
             // Ocultar o spinner e remover o blur
-           
             body.classList.remove('blur-sm');
 
             console.error('Erro ao enviar para a API Gemini:', error);
