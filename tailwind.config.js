@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/**/*.{html,js,ts,jsx,tsx}", // Ajuste os caminhos conforme necessário
@@ -9,6 +10,9 @@ module.exports = {
         primary: '#0C88DF', // Exemplo de cor personalizada
         secondary: '#013EA6',
       },
+      screen:{
+        'small-tablet': {'max': '400px'}
+      }
     },
   },
   plugins: [],
