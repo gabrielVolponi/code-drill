@@ -18,7 +18,7 @@ function handleRequest() {
     // Obtenha o valor do campo de entrada
     const userInput = document.getElementById('exerciseInput').value;
 
-    const prompt = `Crie um unico exercício de programação sobre o seguinte tema: "${userInput}". O exercício deve conter: 1) Um enunciado claro do problema, 2) Exemplos de entrada e saída, e 3) Não forneça a solução. Se não for determinada uma linguagem de programação, escolha JavaScript. O exercício deve ser focado em ${userInput}, sem desvios para explicações gerais.`;
+    const prompt = `Crie um unico exercício de programação sobre o seguinte tema: "${userInput}". O exercício deve conter: 1) Um enunciado claro do problema, 2) 1 Exemplo de entrada e saída, e 3) Não forneça a solução. Se não for determinada uma linguagem de programação, escolha JavaScript. O exercício deve ser focado em ${userInput}, sem desvios para explicações.`;
 
     // URL da API do Gemini
     const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAoRNt_ipLcYSHWRTGvNdtbKmcqCtx2aXE';
@@ -26,7 +26,7 @@ function handleRequest() {
     // Corpo da requisição
     const requestBody = {
         contents: [{
-            parts: [{ text: userInput }]
+            parts: [{ text: prompt }]
         }]
     };
 
