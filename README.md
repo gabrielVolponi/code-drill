@@ -2,7 +2,7 @@
 
 This project is a 🌐 web application that allows users to generate exercises based on a selected theme and difficulty level. By leveraging an 🤖 AI API, the application creates tailored exercises to match the user's input.
 
-🌍 **Live Demo**: [Visit the Project](https://your-project-url.vercel.app)
+🌍 **Live Demo**: [Visit the Project](https://code-drill-ai.vercel.app/)
 
 ## ✨ Features
 
