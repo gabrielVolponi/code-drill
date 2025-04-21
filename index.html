@@ -15,12 +15,12 @@
 </head>
 
 <body class="overflow-x-hidden ">
-    <header class="fixed top-0 left-0 w-full backdrop-blur-sm flex justify-between items-center p-5 md:p-2 xl:p-0 z-50 2xl:p-4">
+    <header class="fixed top-0 left-0 w-full backdrop-blur-sm flex justify-between items-center p-5 md:p-2  z-50 2xl:p-4">
         <a href="#exercises"><i
-                class="fa-solid fa-file-code text-[30px] text-[#0C88DF] sm:text-[38px] sm:ml-5 sm:mt-5  lg:ml-10 2xl:mt-6 2xl:mb-2 2xl:text-[50px]  "></i></a>
+                class="fa-solid fa-file-code text-[30px] text-[#0C88DF] sm:text-[38px] sm:ml-5 sm:mt-5  lg:mt-4 lg:ml-10 2xl:mt-6 2xl:mb-2 2xl:text-[50px]  "></i></a>
         <button id="menuButton">
             <i
-                class="fa-solid fa-bars text-[30px] sm:text-[38px] sm:mr-5 sm:mt-5 lg:mr-10 2xl:mt-6 2xl:mb-2 2xl:text-[50px] text-[#0C88DF]  "></i>
+                class="fa-solid fa-bars text-[30px] sm:text-[38px] sm:mr-5 sm:mt-5 lg:mr-10 lg:mt-4 2xl:mt-6 2xl:mb-2 2xl:text-[50px] text-[#0C88DF]  "></i>
         </button>
     </header>
 
@@ -28,7 +28,7 @@
     </div>
 
     <div id="sidebar"
-        class="fixed top-0 right-0 h-full w-2/5 bg-[#0C88DF] transform translate-x-full transition-transform duration-300 z-60 lg:w-1/6 md:w-1/3 sm:w-1/3">
+        class="fixed top-0 right-0 h-full w-3/5 bg-[#0C88DF] transform translate-x-full transition-transform duration-300 z-60 lg:w-1/6 md:w-1/3 sm:w-1/3">
 
         <nav class="text-white p-8 space-y-6 flex flex-col items-center ">
             <i class="fa-solid fa-file-code text-4xl text-[#FFF] mx-auto block"></i>
@@ -62,12 +62,16 @@
                 <p class="border-2 px-4 rounded-md text-white bg-yellow-500 border-yellow-500">Medium</p>
                 <p class="border-2 px-4 rounded-md text-white bg-red-500 border-red-500">Hard</p>
             </div>
-          
+            <div id="loadingSpinner" class="hidden fixed inset-0  items-center justify-center z-50">
+                <div
+                    class="w-16 h-16 border-4 border-t-blue-500 border-b-blue-500 border-gray-200 rounded-full animate-spin">
+                </div>
+            </div>
             <div class="flex items-center relative -top-4 ">
                 <input id="exerciseInput"
                     class="bg-blue-200 w-76 px-2 py-1 rounded-md lg:w-135 lg:px-4 sm:py-2 sm:px-3 sm:w-110" type="text"
                     placeholder="Search for an exercise">
-                <div id="searchIcon" class="relative -left-6 text-[#0C88DF] sm:text-[22px] sm:-left-8 md:text-[22px] md:-left-8 lg:text-[22px] lg:-left-8 xl:text-[24px] xl:-left-8"><i
+                <div id="searchIcon" class="relative -left-6 text-[#0C88DF]"><i
                         class="fa-solid fa-circle-chevron-right"></i></div>
             </div>
             <div class="w-5/6 justify-center mb-10 lg:w-140 sm:w-115 sm:pt-2">
@@ -86,7 +90,7 @@
 
         <section id="about" class="min-h-screen pt-[80px] lg:pt-[100px] sm:ml-6
         ">
-            <h2 class="text-[#0C88DF] text-3xl font-bold ml-6 mb-6 lg:text-[46px] md:flex md:justify-center md:m-0 sm:flex sm:justify-center sm:m-0">About the Project</h2>
+            <h2 class="text-[#0C88DF] text-3xl font-bold ml-6 mb-6 lg:text-[46px] lg:ml-10">About the Project</h2>
             <div
                 class="flex flex-col justify-center w-80 m-6 gap-6 lg:w-9/10 lg:text-center lg:ml-10 lg:text-[22px] md:w-9/10 sm:w-9/10">
                 <p class="text-start text-[#0C88DF] ">This website was created to help people who are learning
@@ -112,7 +116,7 @@
                     <div class="flex justify-evenly gap-8 mb-10 lg:mb-0 md:mb-0">
                         <img class="w-10 lg:w-15 xl:w-20" src="images/svgs-icons/node-js-brands.svg" alt="">
                         <img class="w-10 lg:w-15 xl:w-20" src="images/svgs-icons/tailwind-css.svg" alt="">
-                        <img class="w-10 lg:w-20 xl:w-25" src="images/svgs-icons/gemini-removebg-preview.png" alt="">
+                        <img class="w-10 lg:w-15 xl:w-20" src="images/svgs-icons/openai.svg" alt="">
                     </div>
                 </div>
                 <div id="linkSectionCreators" class="flex flex-col text-[#0C88DF] ">
@@ -125,7 +129,7 @@
         </section>
 
         <section id="creators" class="min-h-screen pt-[80px] lg:pt-[100px] sm:mx-6 lg:mx-0">
-            <h2 class="text-[#0C88DF] text-3xl font-bold ml-6 mb-6 mt-10 lg:text-5 lg:text-[46px] md:flex md:justify-center md:mx-0 sm:flex sm:justify-center sm:m-0">Creators
+            <h2 class="text-[#0C88DF] text-3xl font-bold ml-6 mb-6 mt-10 lg:text-5 lg:ml-16 lg:text-[46px]">Creators
             </h2>
             <div class="flex flex-col justify-center gap-13  items-center lg:flex-row sm:gap-0 sm:mx-[5%] lg:mx-0">
                 <div class="w-full flex justify-center lg:flex-col-reverse lg:pl-16 lg:w-[50%] sm:items-center ">
