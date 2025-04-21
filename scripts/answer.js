@@ -47,3 +47,8 @@ if (exerciseAnswer) {
     document.getElementById('answer').textContent = 'Nenhuma resposta encontrada.';
 }
 
+document.getElementById("btnDone").addEventListener("click", function () {
+    const modal = document.getElementById("modal");
+    modal.classList.remove("hidden"); // Exibe o modal
+});
+
