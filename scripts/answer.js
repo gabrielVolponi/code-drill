@@ -37,4 +37,13 @@ function formatTime(seconds) {
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 }
 
+// Recuperar a resposta do localStorage
+const exerciseAnswer = localStorage.getItem('exerciseAnswer');
+
+// Exibir a resposta no elemento com ID "answer"
+if (exerciseAnswer) {
+    document.getElementById('answer').textContent = exerciseAnswer;
+} else {
+    document.getElementById('answer').textContent = 'Nenhuma resposta encontrada.';
+}
 
