@@ -34,6 +34,7 @@
         ></i>
       </button>
     </header>
+    
     <div
       id="overlay"
       class="fixed inset-0 backdrop-blur-sm hidden z-30 lg:backdrop-blur-none xl:backdrop-blur-none"
@@ -64,16 +65,12 @@
           class="w-9/10 h-8/10 bg-[#6db8ec] mx-auto mt-25 text-[#ffffff] rounded-md"
         >
           <div class="m-4 my-6 py-2 px-1">
-            <h2 class="text-2xl font-bold">Exercise</h2>
-            <hr />
+            <h2 id="answerTitle" class="text-2xl font-bold "></h2>
+            
             <p id="answer">
-              
+              <!-- Populado pela I.A -->
             </p>
-            <hr />
-            <div class="flex justify-evenly">
-              <p id="AnswerInput">input:</p>
-              <p id="AnswerOutput">output:</p>
-            </div>
+            
           </div>
         </div>
         <p
@@ -81,6 +78,19 @@
         >
           00:00:00
         </p>
+        <div id="modal" class="hidden fixed inset-0 backdrop-blur-xl flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg p-6 text-center w-80">
+              <h2 class="text-2xl font-bold text-green-600 mb-4">Congratulations!</h2>
+              <p class="text-gray-700 mb-6">You have completed the exercise.</p>
+              
+              <a href="index.html" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Back to Home
+              </a>
+              <button id="closeModal" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">
+                Close
+              </button>
+            </div>
+          </div>
         <div class="flex items-center justify-center gap-4">
           <input
             id="btnStart"
@@ -119,11 +129,11 @@
           repo !
         </p>
         <div class="flex gap-4 items-center">
-          <i class="fa-solid fa-star lg:text-3xl md:text-2xl sm:text-xl"></i>
+          <i class="fa-solid fa-star lg:text-3xl md:text-2xl sm:text-xl hover:text-yellow-500"></i>
           <a
             href="https://github.com/gabrielVolponi/code-drill"
             target="_blank"
-            class="hover:text-blue-300"
+            class="hover:text-purple-500"
           >
             <i class="fa-brands fa-github text-2xl lg:text-3xl md:text-2xl"></i>
           </a>
