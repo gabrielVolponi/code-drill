@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+    <link rel="short out icon" href="images/svgs-icons/file-code-solid.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header
+      class="fixed top-0 left-0 w-full backdrop-blur-sm flex justify-between items-center p-5 sm:p-2 z-50 2xl:p-4"
+    >
+      <a href="#exercises"
+        ><i
+          class="fa-solid fa-file-code text-[30px] ml-3 text-[#0C88DF] sm:text-[38px] sm:ml-5 sm:mt-5 lg:mt-4 lg:ml-10 2xl:mt-6 2xl:mb-2 2xl:text-[50px]"
+        ></i
+      ></a>
+      <button id="menuButton">
+        <i
+          class="fa-solid fa-bars text-[30px] ml-3 sm:text-[38px] sm:mr-5 sm:mt-5 lg:mr-10 lg:mt-4 2xl:mt-6 2xl:mb-2 2xl:text-[50px] text-[#0C88DF]"
+        ></i>
+      </button>
+    </header>
+    <div
+      id="overlay"
+      class="fixed inset-0 backdrop-blur-sm hidden z-30 lg:backdrop-blur-none xl:backdrop-blur-none"
+    ></div>
+
+    <div
+      id="sidebar"
+      class="fixed top-0 right-0 h-full w-3/5 bg-[#0C88DF] transform translate-x-full transition-transform duration-300 z-60 lg:w-1/6 md:w-1/3 sm:w-1/3"
+    >
+      <nav class="text-white p-8 space-y-6 flex flex-col items-center">
+        <i class="fa-solid fa-file-code text-4xl text-[#FFF] mx-auto block"></i>
+        <ul class="flex flex-col gap-4 text-[26px] items-center mt-[50px]">
+          <li><a href="#exercises" class="">Exercises</a></li>
+          <li><a href="#about" class="">About</a></li>
+          <li><a href="#creators" class=" ">Creators</a></li>
+          <li><a href="#contact" class="">Contact</a></li>
+        </ul>
+        <i
+          id="closeSide"
+          class="fa-solid fa-circle-chevron-right absolute bottom-[150px] text-4xl text-[#FFF]"
+        ></i>
+      </nav>
+    </div>
+
+    <main class="flex-grow">
+      <article class="min-h-min">
+        <div
+          class="w-9/10 h-8/10 bg-[#6db8ec] mx-auto mt-25 text-[#ffffff] rounded-md"
+        >
+          <div class="m-4 my-6 py-2 px-1">
+            <h2 class="text-2xl font-bold">Exercise</h2>
+            <hr />
+            <p id="answer">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium eius iusto neque sequi, saepe aperiam dignissimos unde
+              expedita, mollitia facilis totam cum inventore obcaecati alias!
+              Dolor harum non recusandae excepturi?Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Accusantium eius iusto neque sequi,
+              saepe aperiam dignissimos unde expedita, mollitia facilis totam
+              cum inventore obcaecati alias! Dolor harum non recusandae
+              excepturi?
+            </p>
+            <hr />
+            <div class="flex justify-evenly">
+              <p id="AnswerInput">input:</p>
+              <p id="AnswerOutput">output:</p>
+            </div>
+          </div>
+        </div>
+        <p
+          class="flex justify-center p-2 text-3xl font-semibold text-[#013ea6] m-2"
+        >
+          00:00:00
+        </p>
+        <div class="flex items-center justify-center gap-4">
+          <input
+            id="btnStart"
+            class="px-14 py-3 bg-[#6388c8] rounded-md text-[#ffffff]"
+            type="submit"
+            value="START"
+          /><input
+            id="btnStart"
+            class=" hidden px-14 py-3 bg-[#c02d2d] rounded-md text-[#ffffff]"
+            type="submit"
+            value="STOP"
+          /><input
+            id="btnDone"
+            class="px-14 py-3 bg-[#2ca734] rounded-md text-[#ffffff]"
+            type="submit"
+            value="DONE"
+          />
+        </div>
+      </article>
+    </main>
+
+    <footer
+      class="bg-[#0C88DF] w-full py-6 mt-15 text-white flex flex-col justify-center items-center"
+    >
+      <div class="flex flex-col items-center gap-4">
+        <p
+          class="text-center text-sm lg:text-[24px] md:text-[16px] sm:text-[16px] sm:text-xl"
+        >
+          Leave a star on our
+          <a
+            href="https://github.com/your-repo"
+            target="_blank"
+            class="underline hover:text-blue-300"
+            >GitHub</a
+          >
+          repo !
+        </p>
+        <div class="flex gap-4 items-center">
+          <i class="fa-solid fa-star lg:text-3xl md:text-2xl sm:text-xl"></i>
+          <a
+            href="https://github.com/gabrielVolponi/code-drill"
+            target="_blank"
+            class="hover:text-blue-300"
+          >
+            <i class="fa-brands fa-github text-2xl lg:text-3xl md:text-2xl"></i>
+          </a>
+        </div>
+        <p class="text-xs text-center lg:text-[18px] sm:text-[14px]">
+          © 2025 Code Drill. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="scripts/exercises.js"></script>
+    <script src="scripts/menuLateral.js"></script>
+  </body>
+</html>
