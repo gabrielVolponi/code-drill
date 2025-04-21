@@ -64,5 +64,3 @@ document.getElementById('closeModal').addEventListener('click', function (params
 
 
 
-
-
