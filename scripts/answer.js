@@ -49,6 +49,15 @@ if (exerciseAnswer) {
 
 document.getElementById("btnDone").addEventListener("click", function () {
     const modal = document.getElementById("modal");
-    modal.classList.remove("hidden"); // Exibe o modal
+    modal.classList.remove("hidden"); 
 });
+
+document.getElementById('closeModal').addEventListener('click', function (params) {
+    const modal = document.getElementById("modal")
+    modal.classList.add("hidden")
+})
+
+
+
+
 
