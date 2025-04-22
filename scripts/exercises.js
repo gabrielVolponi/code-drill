@@ -90,7 +90,8 @@ function handleRequest() {
         })
         .catch(error => {
             // Ocultar o spinner e remover o blur
-            body.classList.remove('blur-sm');
+            
+            overlay2.classList.add('hidden');
             spinner.classList.add('hidden');
 
             console.error('Erro ao enviar para a API Gemini:', error);
