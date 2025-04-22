@@ -77,7 +77,8 @@ function handleRequest() {
             return response.json();
         })
         .then(data => {
-
+            spinner.classList.add('hidden');
+            overlay2.classList.add('hidden');
 
             // Obter o texto da resposta da API
             const exerciseText = data.candidates[0].content.parts[0].text;
