@@ -8,6 +8,32 @@ document.getElementById('exerciseInput').addEventListener('keydown', function (e
     }
 });
 
+
+let selectedLevel = 'Medium'; 
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const defaultButton = document.querySelector('.difficulty-btn[data-level="Medium"]');
+    defaultButton.classList.remove('opacity-50');
+    defaultButton.classList.add('opacity-100', 'shadow-lg',  'border-4');
+});
+const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+
+difficultyButtons.forEach(button => {
+button.addEventListener('click', () => {
+    difficultyButtons.forEach(btn => {
+        btn.classList.remove('opacity-100', 'shadow-lg', 'border-4');
+        btn.classList.add('opacity-50');
+    });
+    
+    button.classList.remove('opacity-50');
+    button.classList.add('opacity-100', 'shadow-lg',  'border-4');
+
+    selectedLevel = button.getAttribute('data-level');
+});
+});
+
+
 function handleRequest() {
     // Mostrar o spinner e aplicar blur no corpo
     const body = document.body;
@@ -20,7 +46,11 @@ function handleRequest() {
     // Obtenha o valor do campo de entrada
     const userInput = document.getElementById('exerciseInput').value;
 
-    const prompt = `Crie um unico exercício de programação sobre o seguinte tema: "${userInput}". O exercício deve conter: 1) Um enunciado claro do problema, 2) 1 Exemplo de entrada e saída, e 3) Não forneça a solução. Se não for determinada uma linguagem de programação, escolha JavaScript. O exercício deve ser focado em ${userInput}, sem desvios para explicações. Limite sua reposta a 500 caracteres, sempre!`;
+
+
+    const prompt = `Crie um unico exercício de programação sobre o seguinte tema: "${userInput}". O exercício deve conter: 1) Um enunciado claro do problema, 2) 1 Exemplo de entrada e saída, e 3) Não forneça a solução. Se não for determinada uma linguagem de programação, escolha JavaScript. O exercício deve ser focado em ${userInput} e o nivel do execício deve ser ${selectedLevel}, sem desvios para explicações. Limite sua reposta a 500 caracteres, sempre!`;
+
+    console.log(prompt);
 
     // URL da API do Gemini
     const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAoRNt_ipLcYSHWRTGvNdtbKmcqCtx2aXE';
@@ -47,8 +77,7 @@ function handleRequest() {
             return response.json();
         })
         .then(data => {
-            // Ocultar o spinner e remover o blur
-            body.classList.remove('blur-2xl');
+
 
             // Obter o texto da resposta da API
             const exerciseText = data.candidates[0].content.parts[0].text;
@@ -62,6 +91,7 @@ function handleRequest() {
         .catch(error => {
             // Ocultar o spinner e remover o blur
             body.classList.remove('blur-sm');
+            spinner.classList.add('hidden');
 
             console.error('Erro ao enviar para a API Gemini:', error);
         });

@@ -65,12 +65,14 @@
                         exercises</strong>
                     already generated for our users!</p>
             </div>
-            <div class="flex gap-8  mb-6 justify-center relative -top-2 xl:mt-[-1rem] 2xl:mt-0 sm:pt-1">
-                <p class="border-2 px-4 rounded-md text-white bg-green-500 border-green-500">Easy</p>
-                <p class="border-2 px-4 rounded-md text-white bg-yellow-500 border-yellow-500">Medium</p>
-                <p class="border-2 px-4 rounded-md text-white bg-red-500 border-red-500">Hard</p>
+            <div id="difficultySelector" class="flex gap-8 mb-6 justify-center relative -top-2 xl:mt-[-1rem] 2xl:mt-0 sm:pt-1">
+                <button data-level="Easy" class="transition-transform duration-200 ease-in-out difficulty-btn cursor-pointer border-2 w-[80px] py-[2px] rounded-md text-white bg-green-500 border-green-500 opacity-50 hover:opacity-100 ">Easy
+                </button>
+                <button data-level="Medium" class="transition-transform duration-200 ease-in-out difficulty-btn cursor-pointer border-2 w-[80px] py-[2px] rounded-md text-white bg-yellow-500 border-yellow-500 opacity-50 hover:opacity-100 ">Medium
+                </button>
+                <button data-level="Hard" class="transition-transform duration-200 ease-in-out difficulty-btn cursor-pointer border-2 w-[80px] py-[2px] rounded-md text-white bg-red-500 border-red-500 opacity-50 hover:opacity-100 ">Hard
+                </button>
             </div>
-        
             <div class="flex items-center relative -top-4 ">
                 <input id="exerciseInput"
                     class="bg-blue-200 w-76 px-2 py-1 rounded-md lg:w-135 lg:px-4 sm:py-2 sm:px-3 sm:w-110" type="text"
