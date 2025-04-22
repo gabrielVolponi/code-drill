@@ -11,7 +11,11 @@ document.getElementById('exerciseInput').addEventListener('keydown', function (e
 function handleRequest() {
     // Mostrar o spinner e aplicar blur no corpo
     const body = document.body;
-    body.classList.add('blur-sm');
+    const overlay2 = document.getElementById("overlay2")
+    overlay2.classList.remove('hidden');
+    const spinner = document.getElementById('spinner');
+    spinner.classList.remove('hidden');
+
 
     // Obtenha o valor do campo de entrada
     const userInput = document.getElementById('exerciseInput').value;
@@ -44,7 +48,7 @@ function handleRequest() {
         })
         .then(data => {
             // Ocultar o spinner e remover o blur
-            body.classList.remove('blur-sm');
+            body.classList.remove('blur-2xl');
 
             // Obter o texto da resposta da API
             const exerciseText = data.candidates[0].content.parts[0].text;
