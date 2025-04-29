@@ -67,30 +67,55 @@
           <div class="m-4 my-6 py-2 px-1">
             <h2 id="answerTitle" class="text-2xl font-bold "></h2>
             
-            <p id="answer">
+            <p id="quest">
               <!-- Populado pela I.A -->
             </p>
             
           </div>
+
+
+
+
+        </div>
+        <div id="checkAnswer" class="hidden  rounded-lg mt-[-4px] h-auto w-9/10 mx-auto flex flex-col items-center  justify-center ">   
+         
+          <label class="text-[#0C88DF] font-bold lg:text-[22px] xl:text-[24px] " for="userAnswer"></label>
+          <textarea
+              class="bg-[#c7dae8] p-1 w-full h-40 rounded-md  text-slate-500 mb-2  "
+              name="answer" id="userAnswer" placeholder="Check Answer" required></textarea>
+              <button type="submit" id="submitAnswer" class=" bg-[#0C88DF] text-white px-4 py-2 rounded-md cursor-pointer hover:bg-[#354e78] ">Submit</button>
+
+
+              <!-- <p id="userAnswerCopy" class="w-full bg-[#f5f5f5] rounded-lg py-2 px-3 text-black hidden"> Resposta do usuário vai aqui </p> -->
+              <p id="correction" class="bg-[#6db8ec] py-2 px-1 w-full text-[#ffffff] rounded-md mt-5 hidden"> <!-- Populado pela I.A --></p>
+
+            
+            
+            
         </div>
         <p
           class="flex justify-center p-2 text-3xl font-semibold text-[#013ea6] m-2"
-        >
+        > 
           00:00:00
         </p>
-        <div id="modal" class="hidden fixed inset-0 backdrop-blur-xl flex items-center justify-center z-50">
+        <div id="btnHome" class=" hidden flex justify-center mt-[-10px] ">
+          <a href="index.html" class=" flex justify-center items-center px-4 py-2 w-50 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Back to Home
+          </a>
+        </div>
+        <!-- <div id="modal" class="hidden fixed inset-0 backdrop-blur-xl flex items-center justify-center z-50">
             <div class="bg-white rounded-lg p-6 text-center w-80">
               <h2 class="text-2xl font-bold text-green-600 mb-4">Congratulations!</h2>
               <p class="text-gray-700 mb-6">You have completed the exercise.</p>
-              
-              <a href="index.html" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+              <a href="index.html" class=" px-4 py-2 mr-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
                 <i class="fa-solid fa-arrow-left mr-2"></i> Back to Home
               </a>
+             
               <button id="closeModal" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">
                 Close
               </button>
             </div>
-          </div>
+          </div> -->
         <div class="flex items-center justify-center gap-4">
           <input
             id="btnStart"
@@ -149,5 +174,6 @@
     
     </script>
     <script src="scripts/answer.js"></script>
+    <script src="checkAnswer.js"></script>
   </body>
 </html>

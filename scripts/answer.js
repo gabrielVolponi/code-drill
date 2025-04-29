@@ -40,22 +40,35 @@ function formatTime(seconds) {
 // Recuperar a resposta do localStorage
 const exerciseAnswer = localStorage.getItem('exerciseAnswer');
 
-// Exibir a resposta no elemento com ID "answer"
+// Exibir a resposta no elemento com ID "quest"
 if (exerciseAnswer) {
     // Substituir os asteriscos por tags <strong> para formatação
     const formattedAnswer = exerciseAnswer
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Substitui **texto** por <strong>texto</strong>
         .replace(/\n/g, '<br>'); // Substitui quebras de linha por <br>
 
-    document.getElementById('answer').innerHTML = formattedAnswer;
+    document.getElementById('quest').innerHTML = formattedAnswer;
 } else {
-    document.getElementById('answer').textContent = 'Nenhuma resposta encontrada.';
+    document.getElementById('quest').textContent = 'Nenhuma resposta encontrada.';
 }
 
-document.getElementById("btnDone").addEventListener("click", function () {
-    const modal = document.getElementById("modal");
-    modal.classList.remove("hidden"); 
+// document.getElementById("btnDone").addEventListener("click", function () {
+//     const modal = document.getElementById("modal");
+//     modal.classList.remove("hidden"); 
+// });
+const btnDone = document.getElementById("btnDone")
+btnDone.addEventListener("click", function () {
+    const checkAnswer = document.getElementById("checkAnswer");
+    const bntHome = document.getElementById('btnHome');
+    checkAnswer.classList.remove("hidden"); 
+    btnStart.classList.add('hidden');
+    btnStop.classList.add('hidden');
+    btnDone.classList.add('hidden');
+    bntHome.classList.remove('hidden');
+    clearInterval(timerInterval);
+
 });
+
 
 document.getElementById('closeModal').addEventListener('click', function (params) {
     const modal = document.getElementById("modal")
