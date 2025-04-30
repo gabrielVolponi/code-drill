@@ -61,6 +61,7 @@ btnDone.addEventListener("click", function () {
     const checkAnswer = document.getElementById("checkAnswer");
     const bntHome = document.getElementById('btnHome');
     checkAnswer.classList.remove("hidden"); 
+    checkAnswer.offsetHeigth;
     btnStart.classList.add('hidden');
     btnStop.classList.add('hidden');
     btnDone.classList.add('hidden');
