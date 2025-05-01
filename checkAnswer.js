@@ -5,10 +5,10 @@ function handleCorrection() {
 
     const questText = document.getElementById('quest').textContent
 
-    const promptCorrection = `Dada a seguinte questão: "${questText}", avalie a resposta fornecida pelo usuário: "${userAnswer}".
+    const promptCorrection = `Dada a seguinte questão: "${questText}", avalie a solução fornecida pelo usuário: "${userAnswer}".
 Primeiro, diga claramente se a resposta está correta ou incorreta.
 Se estiver incorreta, aponte de forma breve os principais erros, sem revelar a solução completa.
-Limite toda a resposta a no máximo 500 caracteres.`;
+Limite toda a resposta a no máximo 600 caracteres.`;
 
     // console.log(promptCorrection);
 
